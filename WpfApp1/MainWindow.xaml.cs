@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace WpfApp1
 {
     /// <summary>
@@ -23,11 +24,19 @@ namespace WpfApp1
         public MainWindow()
         {
             InitializeComponent();
+
         }
 
         private void ButtonClose_Click(object sender, RoutedEventArgs e)
         {
-            Application.Current.Shutdown();      
+            Application.Current.Shutdown();
+        }
+
+        private void Registr_Click(object sender, RoutedEventArgs e)
+        {
+          
+            Registration.Visibility = Visibility.Visible;
+
         }
 
         private void ButtonOpenMenu_Click(object sender, RoutedEventArgs e)
@@ -42,5 +51,7 @@ namespace WpfApp1
             ButtonOpenMenu.Visibility = Visibility.Visible; 
             ButtonCloseMenu.Visibility = Visibility.Collapsed;
         }
+
+      
     }
 }

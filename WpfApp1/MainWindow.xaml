@@ -114,6 +114,7 @@
         </EventTrigger>
     </Window.Triggers>
     <Grid Background="#FF1D1D1D">
+
         <StackPanel x:Name="GirdMenu" Width="250" HorizontalAlignment="Left" RenderTransformOrigin="0.5,0.5">
             <StackPanel.RenderTransform>
                 <TransformGroup>
@@ -140,6 +141,7 @@
                         <ImageBrush ImageSource="Assets/22.jpg" Stretch="UniformToFill"/>
                     </Button.Background>
                 </Button>
+
                 <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="40" Height="40" Padding="0" Background="{x:Null}" BorderBrush="{x:Null}">
                     <materialDesign:PackIcon Kind="InformationOutline" Width="20" Height="20"/>
                 </Button>
@@ -350,6 +352,7 @@
                     <TextBlock TextWrapping="Wrap" Foreground="Black" Margin="10" FontWeight="Normal" FontFamily="Akrobat">
                         Несмотря на проблемы с финансами, Айзек с отличием закончил менее престижный колледж. Так он стал инженером. Через несколько лет получил место в отделении Торгового флота, где он мог реализовать свой талант. Начальство было довольно его работой и через какое-то время его перевели поближе к важнейшим торговым путям, карьерный рост самого Айзека неожиданно прекратился.
                     </TextBlock>
+
                 </StackPanel>
             </Grid>
         </Grid>
@@ -361,5 +364,54 @@
                 <materialDesign:PackIcon Kind="Power"/>
             </Button>
         </StackPanel>
+        <Grid x:Name="Authorization">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Frame Width="1018" VerticalAlignment="Top" Height="600" HorizontalAlignment="Left" Content="" Grid.ColumnSpan="3" Grid.RowSpan="3" Background="White"/>
+            <Grid Margin="5" Grid.Row="0" Grid.Column="2" >
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Top"  Height="40" HorizontalAlignment="Right" Margin="10">
+                    <Button x:Name="Help"  Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="30" Height="30" Padding="0" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF000000">
+                        <materialDesign:PackIcon Kind="HelpNetwork" />
+                    </Button>
+                    <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="30" Height="30" Padding="0" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF000000" Click="ButtonClose_Click">
+                        <materialDesign:PackIcon Kind="Power"/>
+                    </Button>
+                </StackPanel>
+            </Grid>
+
+            <Grid Margin="5" Grid.Row="1" Grid.Column="1" >
+                <TextBox x:Name="CapsLock"  VerticalAlignment="Top" Text="CapsLock"  Margin="130,40,138,0"  FontSize="16" Background="Transparent" Foreground="Red" FontWeight="Bold" FontFamily="Akrobat SemiBold" Visibility="Collapsed"/>
+                <TextBox x:Name="NameTextBox"  VerticalAlignment="Top" materialDesign:HintAssist.Hint="Name" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="35,60,10,0" Height="40.1" FontSize="18" Background="Transparent" Foreground="#FF000000" BorderBrush="#FF000000" FontFamily="Akrobat SemiBold"/>
+               
+                <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="30" Height="30" Padding="0" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF000000" Margin="5,70.1,294.332,89.9">
+                    <materialDesign:PackIcon Kind="Account"/>
+                </Button>
+
+                <PasswordBox x:Name="FloatingPasswordBox" VerticalAlignment="Top" materialDesign:HintAssist.Hint="Password" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" Margin="35,104,10,0" Height="40.1" FontSize="18" Background="Transparent" Foreground="#FF000000" BorderBrush="#FF000000" FontFamily="Akrobat SemiBold"/>
+                <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="30" Height="30" Padding="0" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF000000" Margin="5,114.1,294.333,45.9">
+                    <materialDesign:PackIcon Kind="ForgotPassword"/>
+                </Button>
+                <Button x:Name="Enter" Command="{Binding RunDialogCommand}" Width="90" Height="Auto" FontSize="12"  Content="Enter" Margin="191,157,48,10" Background="#FF2196F3"/>
+                <Button x:Name="Registr" Command="{Binding RunDialogCommand}" Width="120" Height="Auto" FontSize="12"  Content="Registration" Margin="46,157,163,10" Background="#FF2196F3" Click="Registr_Click"/>
+
+            </Grid>
+        </Grid>
+        <Grid x:Name="Registration" Visibility="Collapsed">
+            <Grid.Effect>
+                <BlurEffect Radius="2.0" KernelType="Box"/>
+            </Grid.Effect>
+            <Frame Width="600" VerticalAlignment="Top" Height="600" HorizontalAlignment="Center" Content="" Background="#FF252525"/>
+
+        </Grid>
+
     </Grid>
 </Window>
