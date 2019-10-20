@@ -364,54 +364,409 @@
                 <materialDesign:PackIcon Kind="Power"/>
             </Button>
         </StackPanel>
+
+
+
+
         <Grid x:Name="Authorization">
+
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="345*"/>
+                <ColumnDefinition Width="334*"/>
+                <ColumnDefinition Width="339*"/>
             </Grid.ColumnDefinitions>
 
             <Frame Width="1018" VerticalAlignment="Top" Height="600" HorizontalAlignment="Left" Content="" Grid.ColumnSpan="3" Grid.RowSpan="3" Background="White"/>
+            <materialDesign:DrawerHost
+  Margin="64"
+  HorizontalAlignment="Center"
+  VerticalAlignment="Center"
+  BorderThickness="2"
+  BorderBrush="{DynamicResource MaterialDesignDivider}">
+                <materialDesign:DrawerHost.LeftDrawerContent>
+                    <StackPanel
+      Margin="16">
+                        <TextBlock
+        Margin="4"
+        HorizontalAlignment="Center">
+      LEFT FIELD
+                        </TextBlock>
+                        <Button
+        Command="{x:Static materialDesign:DrawerHost.CloseDrawerCommand}"
+        CommandParameter="{x:Static Dock.Left}"
+        Margin="4"
+        HorizontalAlignment="Center"
+        Style="{DynamicResource MaterialDesignFlatButton}">
+                            CLOSE THIS
+                        </Button>
+                        <Button
+        Command="{x:Static materialDesign:DrawerHost.CloseDrawerCommand}"
+        Margin="4"
+        HorizontalAlignment="Center"
+        Style="{DynamicResource MaterialDesignFlatButton}">
+                            CLOSE ALL
+                        </Button>
+                    </StackPanel>
+                </materialDesign:DrawerHost.LeftDrawerContent>
+                <materialDesign:DrawerHost.TopDrawerContent>
+                    <StackPanel
+      Margin="16"
+      HorizontalAlignment="Center"
+      Orientation="Horizontal">
+                        <TextBlock
+        Margin="4"
+        VerticalAlignment="Center">
+      TOP BANANA
+                        </TextBlock>
+                        <Button
+        Command="{x:Static materialDesign:DrawerHost.CloseDrawerCommand}"
+        Style="{DynamicResource MaterialDesignFlatButton}"
+        Margin="4"
+        VerticalAlignment="Center">
+                            CLOSE ALL
+                        </Button>
+                        <Button
+        Command="{x:Static materialDesign:DrawerHost.CloseDrawerCommand}"
+        CommandParameter="{x:Static Dock.Top}"
+        Style="{DynamicResource MaterialDesignFlatButton}"
+        Margin="4"
+        VerticalAlignment="Center">
+                            CLOSE THIS
+                        </Button>
+                    </StackPanel>
+                </materialDesign:DrawerHost.TopDrawerContent>
+                <materialDesign:DrawerHost.RightDrawerContent>
+                    <StackPanel
+      Margin="16">
+                        <TextBlock
+        Margin="4"
+        HorizontalAlignment="Center">
+      THE RIGHT STUFF
+                        </TextBlock>
+                        <Button
+        Command="{x:Static materialDesign:DrawerHost.CloseDrawerCommand}"
+        CommandParameter="{x:Static Dock.Right}"
+        Margin="4"
+        HorizontalAlignment="Center"
+        Style="{DynamicResource MaterialDesignFlatButton}">
+                            CLOSE THIS
+                        </Button>
+                        <Button
+        Command="{x:Static materialDesign:DrawerHost.CloseDrawerCommand}"
+        Margin="4"
+        HorizontalAlignment="Center"
+        Style="{DynamicResource MaterialDesignFlatButton}">
+                            CLOSE ALL
+                        </Button>
+                    </StackPanel>
+                </materialDesign:DrawerHost.RightDrawerContent>
+                <materialDesign:DrawerHost.BottomDrawerContent>
+                    <StackPanel
+      Margin="16"
+      HorizontalAlignment="Center"
+      Orientation="Horizontal">
+                        <TextBlock
+        Margin="4"
+        VerticalAlignment="Center">
+      BOTTOM BRACKET
+                        </TextBlock>
+                        <Button
+        Command="{x:Static materialDesign:DrawerHost.CloseDrawerCommand}"
+        Style="{DynamicResource MaterialDesignFlatButton}"
+        Margin="4"
+        VerticalAlignment="Center">
+                            CLOSE ALL
+                        </Button>
+                        <Button
+        Command="{x:Static materialDesign:DrawerHost.CloseDrawerCommand}"
+        CommandParameter="{x:Static Dock.Bottom}"
+        Style="{DynamicResource MaterialDesignFlatButton}"
+        Margin="4"
+        VerticalAlignment="Center">
+                            CLOSE THIS
+                        </Button>
+                    </StackPanel>
+                </materialDesign:DrawerHost.BottomDrawerContent>
+                <Grid
+    MinWidth="480"
+    MinHeight="480">
+                    <Grid
+      VerticalAlignment="Center"
+      HorizontalAlignment="Center">
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <Button
+        Command="{x:Static materialDesign:DrawerHost.OpenDrawerCommand}"
+        CommandParameter="{x:Static Dock.Left}"
+        Grid.Row="1"
+        Grid.Column="0"
+        Margin="4">
+                            <materialDesign:PackIcon
+          Kind="ArrowLeft" />
+                        </Button>
+                        <Button
+        Command="{x:Static materialDesign:DrawerHost.OpenDrawerCommand}"
+        CommandParameter="{x:Static Dock.Top}"
+        Grid.Row="0"
+        Grid.Column="1"
+        Margin="4">
+                            <materialDesign:PackIcon
+          Kind="ArrowUp" />
+                        </Button>
+                        <Button
+        Command="{x:Static materialDesign:DrawerHost.OpenDrawerCommand}"
+        CommandParameter="{x:Static Dock.Right}"
+        Grid.Row="1"
+        Grid.Column="2"
+        Margin="4">
+                            <materialDesign:PackIcon
+          Kind="ArrowRight" />
+                        </Button>
+                        <Button
+        Command="{x:Static materialDesign:DrawerHost.OpenDrawerCommand}"
+        CommandParameter="{x:Static Dock.Bottom}"
+        Grid.Row="2"
+        Grid.Column="1"
+        Margin="4">
+                            <materialDesign:PackIcon
+          Kind="ArrowDown" />
+                        </Button>
+                        <Button
+        Command="{x:Static materialDesign:DrawerHost.OpenDrawerCommand}"
+        Grid.Row="1"
+        Grid.Column="1"
+        Margin="4"
+        Style="{DynamicResource MaterialDesignRaisedAccentButton}">
+                            <materialDesign:PackIcon
+          Kind="ArrowAll" />
+                        </Button>
+                    </Grid>
+                </Grid>
+            </materialDesign:DrawerHost>
             <Grid Margin="5" Grid.Row="0" Grid.Column="2" >
                 <StackPanel Orientation="Horizontal" VerticalAlignment="Top"  Height="40" HorizontalAlignment="Right" Margin="10">
-                    <Button x:Name="Help"  Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="30" Height="30" Padding="0" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF000000">
+
+                    <Button x:Name="Help"  Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="30" Height="30" ToolTip="Получить помощь"
+                            Padding="0" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF000000">
                         <materialDesign:PackIcon Kind="HelpNetwork" />
                     </Button>
-                    <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="30" Height="30" Padding="0" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF000000" Click="ButtonClose_Click">
+                    <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="30" Height="30" Padding="0" ToolTip="С глаз долой, из сердца вон..."
+                            Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF000000" Click="ButtonClose_Click">
                         <materialDesign:PackIcon Kind="Power"/>
                     </Button>
                 </StackPanel>
             </Grid>
 
+
             <Grid Margin="5" Grid.Row="1" Grid.Column="1" >
-                <TextBox x:Name="CapsLock"  VerticalAlignment="Top" Text="CapsLock"  Margin="130,40,138,0"  FontSize="16" Background="Transparent" Foreground="Red" FontWeight="Bold" FontFamily="Akrobat SemiBold" Visibility="Collapsed"/>
-                <TextBox x:Name="NameTextBox"  VerticalAlignment="Top" materialDesign:HintAssist.Hint="Name" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="35,60,10,0" Height="40.1" FontSize="18" Background="Transparent" Foreground="#FF000000" BorderBrush="#FF000000" FontFamily="Akrobat SemiBold"/>
-               
-                <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="30" Height="30" Padding="0" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF000000" Margin="5,70.1,294.332,89.9">
+                <TextBox x:Name="CapsLock"  VerticalAlignment="Top" Text="CapsLock"  Margin="130,34,138,0"  FontSize="16" Background="Transparent" Foreground="Red" FontWeight="Bold" FontFamily="Akrobat SemiBold" Visibility="Collapsed" ToolTip="Отключите CapsLock, клавиша"/>
+                <TextBox x:Name="NameTextBox"  VerticalAlignment="Top" materialDesign:HintAssist.Hint="Name" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="35,52.5,10,0" Height="40.1" FontSize="16" Background="Transparent" Foreground="#FF000000" BorderBrush="#FF000000" FontFamily="Akrobat SemiBold"/>
+
+                <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="30" Height="30" Padding="0" Background="{x:Null}" ToolTip="Пользователь"
+                        BorderBrush="{x:Null}" Foreground="#FF000000" Margin="5,62.6,294.332,97.4">
                     <materialDesign:PackIcon Kind="Account"/>
                 </Button>
 
-                <PasswordBox x:Name="FloatingPasswordBox" VerticalAlignment="Top" materialDesign:HintAssist.Hint="Password" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" Margin="35,104,10,0" Height="40.1" FontSize="18" Background="Transparent" Foreground="#FF000000" BorderBrush="#FF000000" FontFamily="Akrobat SemiBold"/>
-                <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="30" Height="30" Padding="0" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF000000" Margin="5,114.1,294.333,45.9">
+                <PasswordBox x:Name="FloatingPasswordBox" VerticalAlignment="Top" materialDesign:HintAssist.Hint="Password" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" Margin="35,96.5,10,0" Height="40.1" FontSize="16" Background="Transparent" Foreground="#FF000000" BorderBrush="#FF000000" FontFamily="Akrobat SemiBold"/>
+                <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="30" Height="30" Padding="0" Background="{x:Null}" ToolTip="Пароль"
+                        BorderBrush="{x:Null}" Foreground="#FF000000" Margin="5,106.6,294.332,53.4">
                     <materialDesign:PackIcon Kind="ForgotPassword"/>
                 </Button>
-                <Button x:Name="Enter" Command="{Binding RunDialogCommand}" Width="90" Height="Auto" FontSize="12"  Content="Enter" Margin="191,157,48,10" Background="#FF2196F3"/>
-                <Button x:Name="Registr" Command="{Binding RunDialogCommand}" Width="120" Height="Auto" FontSize="12"  Content="Registration" Margin="46,157,163,10" Background="#FF2196F3" Click="Registr_Click"/>
+                <Button x:Name="Enter" Command="{Binding RunDialogCommand}"   Width="90" Height="24" FontSize="12"  Content="Enter" ToolTip="Войти в систему?" 
+                        Margin="191.166,157,48.166,10" Background="#FF2196F3"/>
+
 
             </Grid>
+            <Grid Grid.Row="1" Grid.Column="0" Margin="200,0,0,0" ToolTip="Феникс, птица возрождения">
+                <Image Source="Assets/Феникс.png" StretchDirection="DownOnly" Stretch="UniformToFill" Margin="28.5,-12,-61.5,-16.5"/>
+            </Grid>
+
+            <Grid Grid.Row="0" Grid.Column="1" Margin="5">
+                <TextBlock Style="{StaticResource MaterialDesignDisplay3TextBlock}" Foreground="#FF000000" FontFamily="Akrobat" ToolTip="Для входа в систему заполните поля"
+                           FontSize="36" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="60,0,0,-58" >Авторизация</TextBlock>
+            </Grid>
+
         </Grid>
         <Grid x:Name="Registration" Visibility="Collapsed">
             <Grid.Effect>
                 <BlurEffect Radius="2.0" KernelType="Box"/>
             </Grid.Effect>
             <Frame Width="600" VerticalAlignment="Top" Height="600" HorizontalAlignment="Center" Content="" Background="#FF252525"/>
-
         </Grid>
+
+        <materialDesign:DrawerHost HorizontalAlignment="Center" VerticalAlignment="Center" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Width="1018" Height="600" BottomDrawerBackground="#FF2B2B2B">
+
+            <materialDesign:DrawerHost.LeftDrawerContent>
+                <StackPanel Margin="0,12" Width="252">
+                    <TextBlock Style="{StaticResource MaterialDesignHeadlineTextBlock}" 
+                               ToolTip="Здравствуйте! Чтобы воспользоваться системой нужна регистрация"
+                               Margin="0,25,68,0" FontFamily="Akrobat SemiBold" HorizontalAlignment="Right">Регистрация</TextBlock>
+                    <StackPanel Margin="0,10,0,0" Width="252" Height="45">
+
+                        <Button Command="{x:Static materialDesign:DrawerHost.CloseDrawerCommand}"
+        CommandParameter="{x:Static Dock.Left}"
+        Margin="0,20,100,4" HorizontalAlignment="Center" ToolTip="Закрыть эту вкладку"
+        Style="{DynamicResource MaterialDesignFlatButton}" Padding="16,4" Height="26" FontFamily="Akrobat" HorizontalContentAlignment="Left">CLOSE THIS</Button>
+
+                        <Button Command="{x:Static materialDesign:DrawerHost.CloseDrawerCommand}"
+        Margin="128,-30,28,4" HorizontalAlignment="Center" ToolTip="Закрыть все окна"
+        Style="{DynamicResource MaterialDesignFlatButton}" Height="26" FontFamily="Akrobat" FontSize="14" HorizontalContentAlignment="Right">CLOSE ALL</Button>
+                    </StackPanel>
+                    <StackPanel Width="252" Height="500">
+
+                        <TextBox  VerticalAlignment="Top" materialDesign:HintAssist.Hint="Name" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Width="180" Height="40" FontSize="14" Background="Transparent" Foreground="White" BorderBrush="White" FontFamily="Akrobat" Margin="5,20,0,0"/>
+                        <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  ToolTip="Как вас звать?" Width="30" Height="30" Padding="0" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Grid.IsSharedSizeScope="True" Margin="-10,-37,205,0">
+                            <materialDesign:PackIcon Kind="Account"/>
+                        </Button>
+                        <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" ToolTip="Удалить" Width="25" Height="25" Padding="0" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Margin="0,-37,-212,0">
+                            <materialDesign:PackIcon Kind="Close" />
+                        </Button>
+
+                        <PasswordBox VerticalAlignment="Top" materialDesign:HintAssist.Hint="Password" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" Width="180" Height="40" FontSize="14" Background="Transparent" Foreground="White" BorderBrush="White" FontFamily="Akrobat" Margin="5,10,0,0"/>
+                        <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  ToolTip="Создайте пароль" Width="30" Height="30" Padding="0" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Margin="-10,-37,205,0">
+                            <materialDesign:PackIcon Kind="ForgotPassword"/>
+                        </Button>
+                        <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" ToolTip="Удалить пароль" Width="25" Height="25" Padding="0" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Margin="0,-37,-212,0">
+                            <materialDesign:PackIcon Kind="Reload" />
+                        </Button>
+                        
+                        <ComboBox materialDesign:HintAssist.Hint="Роль" Width="180" Margin="5,18,0,0" Foreground="White" FontFamily="Akrobat" FontSize="14">
+                            <ComboBoxItem>Пациент</ComboBoxItem>
+                            <ComboBoxItem>Врач учреждения</ComboBoxItem>
+                            <ComboBoxItem>Специалист защиты</ComboBoxItem>
+                        </ComboBox>
+                        <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" ToolTip="Выберите роль" Width="30" Height="30" Padding="0" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Margin="-10,-37,205,0">
+                            <materialDesign:PackIcon Kind="EyePlusOutline" />
+                        </Button>
+                        <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" ToolTip="Добавить документы" Width="25" Height="25" Padding="0" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Margin="0,-37,-212,0">
+                            <materialDesign:PackIcon Kind="File" />
+                        </Button>
+
+                        <TextBox  VerticalAlignment="Top" materialDesign:HintAssist.Hint="Уour Emails" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Width="180" Height="40" FontSize="14" Background="Transparent" Foreground="White" BorderBrush="White" FontFamily="Akrobat" Margin="5,10,0,0"/>
+                        <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" ToolTip="Введите почту" Width="30" Height="30" Padding="0" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Margin="-10,-37,205,0">
+                            <materialDesign:PackIcon Kind="Email" />
+                        </Button>
+                        <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" ToolTip="Проверка почты" Width="25" Height="25" Padding="0" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Margin="0,-37,-212,0">
+                            <materialDesign:PackIcon Kind="SendSecure" />
+                            
+                        </Button>
+
+
+                    </StackPanel>
+
+
+
+
+
+                </StackPanel>
+            </materialDesign:DrawerHost.LeftDrawerContent>
+
+            <materialDesign:DrawerHost.TopDrawerContent>
+                <StackPanel Margin="16" HorizontalAlignment="Center" Orientation="Horizontal">
+                    <TextBlock Margin="4" VerticalAlignment="Center">TOP BANANA</TextBlock>
+                    <Button Command="{x:Static materialDesign:DrawerHost.CloseDrawerCommand}"
+        Style="{DynamicResource MaterialDesignFlatButton}"
+        Margin="4" VerticalAlignment="Center">CLOSE ALL</Button>
+
+                    <Button Command="{x:Static materialDesign:DrawerHost.CloseDrawerCommand}"
+        CommandParameter="{x:Static Dock.Top}"
+        Style="{DynamicResource MaterialDesignFlatButton}"
+        Margin="4" VerticalAlignment="Center">CLOSE THIS</Button>
+                </StackPanel>
+            </materialDesign:DrawerHost.TopDrawerContent>
+
+            <materialDesign:DrawerHost.RightDrawerContent>
+                <StackPanel Margin="16">
+                    <TextBlock Margin="4" HorizontalAlignment="Center">THE RIGHT STUFF</TextBlock>
+                    <Button Command="{x:Static materialDesign:DrawerHost.CloseDrawerCommand}"
+        CommandParameter="{x:Static Dock.Right}"
+        Margin="4" HorizontalAlignment="Center"
+        Style="{DynamicResource MaterialDesignFlatButton}">CLOSE THIS</Button>
+
+                    <Button Command="{x:Static materialDesign:DrawerHost.CloseDrawerCommand}"
+        Margin="4" HorizontalAlignment="Center"
+        Style="{DynamicResource MaterialDesignFlatButton}">CLOSE ALL</Button>
+
+                </StackPanel>
+            </materialDesign:DrawerHost.RightDrawerContent>
+
+            <materialDesign:DrawerHost.BottomDrawerContent>
+                <StackPanel Margin="16" HorizontalAlignment="Center" Orientation="Horizontal">
+                    <TextBlock Margin="4" VerticalAlignment="Center">BOTTOM BRACKET</TextBlock>
+                    <Button Command="{x:Static materialDesign:DrawerHost.CloseDrawerCommand}"
+        Style="{DynamicResource MaterialDesignFlatButton}"
+        Margin="4" VerticalAlignment="Center">CLOSE ALL</Button>
+
+                    <Button Command="{x:Static materialDesign:DrawerHost.CloseDrawerCommand}"
+        CommandParameter="{x:Static Dock.Bottom}" Style="{DynamicResource MaterialDesignFlatButton}"
+        Margin="4" VerticalAlignment="Center">CLOSE THIS</Button>
+                </StackPanel>
+            </materialDesign:DrawerHost.BottomDrawerContent>
+
+            <Grid MinWidth="480" MinHeight="480">
+                <Grid VerticalAlignment="Center" HorizontalAlignment="Center" Margin="590,253,156,223">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+
+
+                    <Button
+        Command="{x:Static materialDesign:DrawerHost.OpenDrawerCommand}"
+        CommandParameter="{x:Static Dock.Top}"
+        Grid.Row="0" Grid.Column="1" Margin="4">
+                        <materialDesign:PackIcon Kind="ArrowUp" />
+                    </Button>
+
+                    <Button
+        Command="{x:Static materialDesign:DrawerHost.OpenDrawerCommand}"
+        CommandParameter="{x:Static Dock.Right}"
+        Grid.Row="1" Grid.Column="2" Margin="4">
+                        <materialDesign:PackIcon Kind="ArrowRight" />
+                    </Button>
+
+                    <Button
+        Command="{x:Static materialDesign:DrawerHost.OpenDrawerCommand}"
+        CommandParameter="{x:Static Dock.Bottom}"
+        Grid.Row="2" Grid.Column="1" Margin="4">
+                        <materialDesign:PackIcon Kind="ArrowDown" />
+                    </Button>
+
+                    <Button
+        Command="{x:Static materialDesign:DrawerHost.OpenDrawerCommand}" ToolTip="Открыть все окна"
+        Grid.Row="1" Grid.Column="1" Margin="4" Style="{DynamicResource MaterialDesignRaisedAccentButton}">
+                        <materialDesign:PackIcon Kind="ArrowAll" />
+                    </Button>
+
+                </Grid>
+               
+                <Button Command="{x:Static materialDesign:DrawerHost.OpenDrawerCommand}" ToolTip="Появится вкладка регистрация"
+        CommandParameter="{x:Static Dock.Left}" Width="120" Height="24" FontSize="12"  Content="Registration" Margin="401.166,360.4,492.834,211.6" Background="#FF2196F3">
+                </Button>
+
+            </Grid>
+        </materialDesign:DrawerHost>
 
     </Grid>
 </Window>
