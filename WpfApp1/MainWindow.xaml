@@ -13,7 +13,13 @@
         TextOptions.TextRenderingMode="Auto"
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="{DynamicResource MaterialDesignFont}"
-        Title="MainWindow" Height="600" Width="1018" WindowStyle="None" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+        Title="Феникс" Height="600" Width="1018" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" BorderBrush="Black" WindowStyle="None"
+         
+        MouseLeftButtonDown="Window_MouseLeftButtonDown" 
+    BorderThickness="1" 
+        Padding="5" >
+    
+  
     <Window.Resources>
         <Storyboard x:Key="OpenMenu">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="GirdMain">
@@ -121,6 +127,9 @@
         </Storyboard>
 
     </Window.Resources>
+   
+
+
     <Window.Triggers>
         <EventTrigger RoutedEvent="ButtonBase.Click" SourceName="ButtonOpenMenu">
             <BeginStoryboard Storyboard="{StaticResource OpenMenu}"/>
@@ -136,8 +145,16 @@
 
 
     </Window.Triggers>
-    <Grid x:Name="grid" Background="#FF1D1D1D" d:IsEffectDisabled="True">
+    <Grid x:Name="grid" Background="#FF1D1D1D" >
 
+        <Border>
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="14" Color="Black" Opacity="0.8" ShadowDepth="2" Direction="-75" />
+            </Border.Effect>
+            
+            
+        </Border>
+        
         <StackPanel x:Name="GirdMenu" Width="250" HorizontalAlignment="Left" RenderTransformOrigin="0.5,0.5">
             <StackPanel.RenderTransform>
                 <TransformGroup>
@@ -586,7 +603,10 @@
                 </materialDesign:DrawerHost>
                 <Grid Margin="5" Grid.Row="0" Grid.Column="2" >
                     <StackPanel Orientation="Horizontal" VerticalAlignment="Top"  Height="40" HorizontalAlignment="Right" Margin="10">
-
+                        <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="30" Height="30" Padding="0" ToolTip="Свернуть"
+                            Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF000000" Click="ButtonWrap_Click">
+                            <materialDesign:PackIcon Kind="ArrowBottomLeft" />
+                        </Button>
                         <Button x:Name="Help"  Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="30" Height="30" ToolTip="Получить помощь"
                             Padding="0" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF000000">
                             <materialDesign:PackIcon Kind="HelpNetwork" />
@@ -595,6 +615,10 @@
                             Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF000000" Click="ButtonClose_Click">
                             <materialDesign:PackIcon Kind="Power"/>
                         </Button>
+                        
+                        
+
+
                     </StackPanel>
                 </Grid>
 

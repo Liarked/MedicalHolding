@@ -24,7 +24,17 @@ namespace WpfApp1
         public MainWindow()
         {
             InitializeComponent();
+            
+        }
 
+        private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            this.DragMove();
+        }
+
+        private void ButtonWrap_Click(object sender, RoutedEventArgs e)
+        {
+            WindowState = WindowState.Minimized;
         }
 
         private void ButtonClose_Click(object sender, RoutedEventArgs e)
