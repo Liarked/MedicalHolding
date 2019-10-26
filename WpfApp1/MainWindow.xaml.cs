@@ -62,6 +62,19 @@ namespace WpfApp1
             ButtonCloseMenu.Visibility = Visibility.Collapsed;
         }
 
+        private void ButtonOpenMenuTwo_Click(object sender, RoutedEventArgs e)
+        {
+
+            ButtonOpenMenuTwo.Visibility = Visibility.Collapsed;
+            ButtonCloseMenuTwo.Visibility = Visibility.Visible;
+        }
+
+        private void ButtonCloseMenuTwo_Click(object sender, RoutedEventArgs e)
+        {
+            ButtonOpenMenuTwo.Visibility = Visibility.Visible;
+            ButtonCloseMenuTwo.Visibility = Visibility.Collapsed;
+        }
+
         private void Aenter_Click(object sender, RoutedEventArgs e)
         {
            
